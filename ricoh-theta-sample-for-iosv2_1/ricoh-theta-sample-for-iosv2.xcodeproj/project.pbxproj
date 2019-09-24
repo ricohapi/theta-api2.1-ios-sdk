@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2269A62416D74D9600A1D342 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2269A62316D74D9600A1D342 /* ImageIO.framework */; };
+		22CA6B4916DB32CC001EB1FF /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CA6B4816DB32CC001EB1FF /* Accelerate.framework */; };
+		22F963A616D746850007DF95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F963A516D746850007DF95 /* UIKit.framework */; };
+		22F963A816D746850007DF95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F963A716D746850007DF95 /* Foundation.framework */; };
+		22F963AA16D746850007DF95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F963A916D746850007DF95 /* CoreGraphics.framework */; };
+		3E437EFD1A1B9597003FA39E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E437EFC1A1B9597003FA39E /* GLKit.framework */; };
+		3E437EFF1A1B95A6003FA39E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E437EFE1A1B95A6003FA39E /* OpenGLES.framework */; };
+		FAA82EB71BFCABE5000C0F87 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA82EB51BFCABE5000C0F87 /* MainStoryboard.storyboard */; };
+		FAA82EBA1BFCABF7000C0F87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAA82EB81BFCABF7000C0F87 /* InfoPlist.strings */; };
+		FABFAFDA1BFCA10500937B1D /* HttpConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFCB1BFCA10500937B1D /* HttpConnection.m */; };
+		FABFAFDB1BFCA10500937B1D /* HttpDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFCD1BFCA10500937B1D /* HttpDeviceInfo.m */; };
+		FABFAFDC1BFCA10500937B1D /* HttpFileList.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFCF1BFCA10500937B1D /* HttpFileList.m */; };
+		FABFAFDD1BFCA10500937B1D /* HttpImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFD11BFCA10500937B1D /* HttpImageInfo.m */; };
+		FABFAFDE1BFCA10500937B1D /* HttpSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFD31BFCA10500937B1D /* HttpSession.m */; };
+		FABFAFDF1BFCA10500937B1D /* HttpStatusTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFD51BFCA10500937B1D /* HttpStatusTimer.m */; };
+		FABFAFE01BFCA10500937B1D /* HttpStorageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFD71BFCA10500937B1D /* HttpStorageInfo.m */; };
+		FABFAFE11BFCA10500937B1D /* HttpStream.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFD91BFCA10500937B1D /* HttpStream.m */; };
+		FABFAFE81BFCA16C00937B1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FABFAFE21BFCA16C00937B1D /* Default-568h@2x.png */; };
+		FABFAFE91BFCA16C00937B1D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FABFAFE31BFCA16C00937B1D /* Default.png */; };
+		FABFAFEA1BFCA16C00937B1D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FABFAFE41BFCA16C00937B1D /* Default@2x.png */; };
+		FABFAFEB1BFCA16C00937B1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFE51BFCA16C00937B1D /* main.m */; };
+		FABFAFEC1BFCA16C00937B1D /* nothumb.png in Resources */ = {isa = PBXBuildFile; fileRef = FABFAFE61BFCA16C00937B1D /* nothumb.png */; };
+		FABFB0011BFCA36200937B1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFEF1BFCA36200937B1D /* AppDelegate.m */; };
+		FABFB0021BFCA36200937B1D /* glkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFF21BFCA36200937B1D /* glkViewController.m */; };
+		FABFB0031BFCA36200937B1D /* GLRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFF41BFCA36200937B1D /* GLRenderView.m */; };
+		FABFB0041BFCA36200937B1D /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFF61BFCA36200937B1D /* ImageViewController.m */; };
+		FABFB0051BFCA36200937B1D /* SphereXmp.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFF81BFCA36200937B1D /* SphereXmp.m */; };
+		FABFB0061BFCA36200937B1D /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFFA1BFCA36200937B1D /* TableCell.m */; };
+		FABFB0071BFCA36200937B1D /* TableCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFFC1BFCA36200937B1D /* TableCellObject.m */; };
+		FABFB0081BFCA36200937B1D /* UVSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFAFFE1BFCA36200937B1D /* UVSphere.m */; };
+		FABFB0091BFCA36200937B1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABFB0001BFCA36200937B1D /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2269A62316D74D9600A1D342 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		22CA6B4816DB32CC001EB1FF /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		22F963A216D746850007DF95 /* ricoh-theta-sample-for-iosv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ricoh-theta-sample-for-iosv2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F963A516D746850007DF95 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		22F963A716D746850007DF95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		22F963A916D746850007DF95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E437EFC1A1B9597003FA39E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		3E437EFE1A1B95A6003FA39E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		FAA82EB61BFCABE5000C0F87 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FAA82EB91BFCABF7000C0F87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FABFAFCA1BFCA10500937B1D /* HttpConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpConnection.h; path = "ricoh-theta-sample-for-iosv2/http/HttpConnection.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFCB1BFCA10500937B1D /* HttpConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpConnection.m; path = "ricoh-theta-sample-for-iosv2/http/HttpConnection.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFCC1BFCA10500937B1D /* HttpDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpDeviceInfo.h; path = "ricoh-theta-sample-for-iosv2/http/HttpDeviceInfo.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFCD1BFCA10500937B1D /* HttpDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpDeviceInfo.m; path = "ricoh-theta-sample-for-iosv2/http/HttpDeviceInfo.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFCE1BFCA10500937B1D /* HttpFileList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpFileList.h; path = "ricoh-theta-sample-for-iosv2/http/HttpFileList.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFCF1BFCA10500937B1D /* HttpFileList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpFileList.m; path = "ricoh-theta-sample-for-iosv2/http/HttpFileList.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFD01BFCA10500937B1D /* HttpImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpImageInfo.h; path = "ricoh-theta-sample-for-iosv2/http/HttpImageInfo.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFD11BFCA10500937B1D /* HttpImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpImageInfo.m; path = "ricoh-theta-sample-for-iosv2/http/HttpImageInfo.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFD21BFCA10500937B1D /* HttpSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpSession.h; path = "ricoh-theta-sample-for-iosv2/http/HttpSession.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFD31BFCA10500937B1D /* HttpSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpSession.m; path = "ricoh-theta-sample-for-iosv2/http/HttpSession.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFD41BFCA10500937B1D /* HttpStatusTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpStatusTimer.h; path = "ricoh-theta-sample-for-iosv2/http/HttpStatusTimer.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFD51BFCA10500937B1D /* HttpStatusTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpStatusTimer.m; path = "ricoh-theta-sample-for-iosv2/http/HttpStatusTimer.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFD61BFCA10500937B1D /* HttpStorageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpStorageInfo.h; path = "ricoh-theta-sample-for-iosv2/http/HttpStorageInfo.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFD71BFCA10500937B1D /* HttpStorageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpStorageInfo.m; path = "ricoh-theta-sample-for-iosv2/http/HttpStorageInfo.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFD81BFCA10500937B1D /* HttpStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpStream.h; path = "ricoh-theta-sample-for-iosv2/http/HttpStream.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFD91BFCA10500937B1D /* HttpStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpStream.m; path = "ricoh-theta-sample-for-iosv2/http/HttpStream.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFE21BFCA16C00937B1D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "ricoh-theta-sample-for-iosv2/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		FABFAFE31BFCA16C00937B1D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "ricoh-theta-sample-for-iosv2/Default.png"; sourceTree = SOURCE_ROOT; };
+		FABFAFE41BFCA16C00937B1D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "ricoh-theta-sample-for-iosv2/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		FABFAFE51BFCA16C00937B1D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "ricoh-theta-sample-for-iosv2/main.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFE61BFCA16C00937B1D /* nothumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nothumb.png; path = "ricoh-theta-sample-for-iosv2/nothumb.png"; sourceTree = SOURCE_ROOT; };
+		FABFAFE71BFCA16C00937B1D /* ricoh-theta-sample-for-iosv2-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ricoh-theta-sample-for-iosv2-Info.plist"; path = "ricoh-theta-sample-for-iosv2/ricoh-theta-sample-for-iosv2-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FABFAFEE1BFCA36200937B1D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "ricoh-theta-sample-for-iosv2/AppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFEF1BFCA36200937B1D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "ricoh-theta-sample-for-iosv2/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFF01BFCA36200937B1D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "ricoh-theta-sample-for-iosv2/Constants.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFF11BFCA36200937B1D /* glkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = glkViewController.h; path = "ricoh-theta-sample-for-iosv2/glkViewController.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFF21BFCA36200937B1D /* glkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = glkViewController.m; path = "ricoh-theta-sample-for-iosv2/glkViewController.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFF31BFCA36200937B1D /* GLRenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLRenderView.h; path = "ricoh-theta-sample-for-iosv2/GLRenderView.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFF41BFCA36200937B1D /* GLRenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLRenderView.m; path = "ricoh-theta-sample-for-iosv2/GLRenderView.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFF51BFCA36200937B1D /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageViewController.h; path = "ricoh-theta-sample-for-iosv2/ImageViewController.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFF61BFCA36200937B1D /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageViewController.m; path = "ricoh-theta-sample-for-iosv2/ImageViewController.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFF71BFCA36200937B1D /* SphereXmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SphereXmp.h; path = "ricoh-theta-sample-for-iosv2/SphereXmp.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFF81BFCA36200937B1D /* SphereXmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SphereXmp.m; path = "ricoh-theta-sample-for-iosv2/SphereXmp.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFF91BFCA36200937B1D /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableCell.h; path = "ricoh-theta-sample-for-iosv2/TableCell.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFFA1BFCA36200937B1D /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableCell.m; path = "ricoh-theta-sample-for-iosv2/TableCell.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFFB1BFCA36200937B1D /* TableCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableCellObject.h; path = "ricoh-theta-sample-for-iosv2/TableCellObject.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFFC1BFCA36200937B1D /* TableCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableCellObject.m; path = "ricoh-theta-sample-for-iosv2/TableCellObject.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFFD1BFCA36200937B1D /* UVSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UVSphere.h; path = "ricoh-theta-sample-for-iosv2/UVSphere.h"; sourceTree = SOURCE_ROOT; };
+		FABFAFFE1BFCA36200937B1D /* UVSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UVSphere.m; path = "ricoh-theta-sample-for-iosv2/UVSphere.m"; sourceTree = SOURCE_ROOT; };
+		FABFAFFF1BFCA36200937B1D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "ricoh-theta-sample-for-iosv2/ViewController.h"; sourceTree = SOURCE_ROOT; };
+		FABFB0001BFCA36200937B1D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "ricoh-theta-sample-for-iosv2/ViewController.m"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22F9639F16D746850007DF95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E437EFF1A1B95A6003FA39E /* OpenGLES.framework in Frameworks */,
+				3E437EFD1A1B9597003FA39E /* GLKit.framework in Frameworks */,
+				22CA6B4916DB32CC001EB1FF /* Accelerate.framework in Frameworks */,
+				22F963AA16D746850007DF95 /* CoreGraphics.framework in Frameworks */,
+				22F963A816D746850007DF95 /* Foundation.framework in Frameworks */,
+				2269A62416D74D9600A1D342 /* ImageIO.framework in Frameworks */,
+				22F963A616D746850007DF95 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22F9639916D746850007DF95 = {
+			isa = PBXGroup;
+			children = (
+				22F963AB16D746850007DF95 /* ricoh-theta-sample-for-iosv2 */,
+				22F963A416D746850007DF95 /* Frameworks */,
+				22F963A316D746850007DF95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22F963A316D746850007DF95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22F963A216D746850007DF95 /* ricoh-theta-sample-for-iosv2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22F963A416D746850007DF95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E437EFE1A1B95A6003FA39E /* OpenGLES.framework */,
+				3E437EFC1A1B9597003FA39E /* GLKit.framework */,
+				22CA6B4816DB32CC001EB1FF /* Accelerate.framework */,
+				22F963A916D746850007DF95 /* CoreGraphics.framework */,
+				2269A62316D74D9600A1D342 /* ImageIO.framework */,
+				22F963A716D746850007DF95 /* Foundation.framework */,
+				22F963A516D746850007DF95 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22F963AB16D746850007DF95 /* ricoh-theta-sample-for-iosv2 */ = {
+			isa = PBXGroup;
+			children = (
+				FAA82EB51BFCABE5000C0F87 /* MainStoryboard.storyboard */,
+				FABFAFEE1BFCA36200937B1D /* AppDelegate.h */,
+				FABFAFEF1BFCA36200937B1D /* AppDelegate.m */,
+				FABFAFF01BFCA36200937B1D /* Constants.h */,
+				FABFAFF11BFCA36200937B1D /* glkViewController.h */,
+				FABFAFF21BFCA36200937B1D /* glkViewController.m */,
+				FABFAFF31BFCA36200937B1D /* GLRenderView.h */,
+				FABFAFF41BFCA36200937B1D /* GLRenderView.m */,
+				FABFAFF51BFCA36200937B1D /* ImageViewController.h */,
+				FABFAFF61BFCA36200937B1D /* ImageViewController.m */,
+				FABFAFF71BFCA36200937B1D /* SphereXmp.h */,
+				FABFAFF81BFCA36200937B1D /* SphereXmp.m */,
+				FABFAFF91BFCA36200937B1D /* TableCell.h */,
+				FABFAFFA1BFCA36200937B1D /* TableCell.m */,
+				FABFAFFB1BFCA36200937B1D /* TableCellObject.h */,
+				FABFAFFC1BFCA36200937B1D /* TableCellObject.m */,
+				FABFAFFD1BFCA36200937B1D /* UVSphere.h */,
+				FABFAFFE1BFCA36200937B1D /* UVSphere.m */,
+				FABFAFFF1BFCA36200937B1D /* ViewController.h */,
+				FABFB0001BFCA36200937B1D /* ViewController.m */,
+				FA8DADBB1BFC1ECE003C5EA2 /* http */,
+				22F963AC16D746850007DF95 /* Supporting Files */,
+			);
+			path = "ricoh-theta-sample-for-iosv2";
+			sourceTree = "<group>";
+		};
+		22F963AC16D746850007DF95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAA82EB81BFCABF7000C0F87 /* InfoPlist.strings */,
+				FABFAFE21BFCA16C00937B1D /* Default-568h@2x.png */,
+				FABFAFE31BFCA16C00937B1D /* Default.png */,
+				FABFAFE41BFCA16C00937B1D /* Default@2x.png */,
+				FABFAFE51BFCA16C00937B1D /* main.m */,
+				FABFAFE61BFCA16C00937B1D /* nothumb.png */,
+				FABFAFE71BFCA16C00937B1D /* ricoh-theta-sample-for-iosv2-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA8DADBB1BFC1ECE003C5EA2 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				FABFAFCA1BFCA10500937B1D /* HttpConnection.h */,
+				FABFAFCB1BFCA10500937B1D /* HttpConnection.m */,
+				FABFAFCC1BFCA10500937B1D /* HttpDeviceInfo.h */,
+				FABFAFCD1BFCA10500937B1D /* HttpDeviceInfo.m */,
+				FABFAFCE1BFCA10500937B1D /* HttpFileList.h */,
+				FABFAFCF1BFCA10500937B1D /* HttpFileList.m */,
+				FABFAFD01BFCA10500937B1D /* HttpImageInfo.h */,
+				FABFAFD11BFCA10500937B1D /* HttpImageInfo.m */,
+				FABFAFD21BFCA10500937B1D /* HttpSession.h */,
+				FABFAFD31BFCA10500937B1D /* HttpSession.m */,
+				FABFAFD41BFCA10500937B1D /* HttpStatusTimer.h */,
+				FABFAFD51BFCA10500937B1D /* HttpStatusTimer.m */,
+				FABFAFD61BFCA10500937B1D /* HttpStorageInfo.h */,
+				FABFAFD71BFCA10500937B1D /* HttpStorageInfo.m */,
+				FABFAFD81BFCA10500937B1D /* HttpStream.h */,
+				FABFAFD91BFCA10500937B1D /* HttpStream.m */,
+			);
+			name = http;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22F963A116D746850007DF95 /* ricoh-theta-sample-for-iosv2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F963C516D746860007DF95 /* Build configuration list for PBXNativeTarget "ricoh-theta-sample-for-iosv2" */;
+			buildPhases = (
+				22F9639E16D746850007DF95 /* Sources */,
+				22F9639F16D746850007DF95 /* Frameworks */,
+				22F963A016D746850007DF95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ricoh-theta-sample-for-iosv2";
+			productName = "ricoh-theta-sample-for-ios";
+			productReference = 22F963A216D746850007DF95 /* ricoh-theta-sample-for-iosv2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22F9639A16D746850007DF95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					22F963A116D746850007DF95 = {
+						DevelopmentTeam = 2473VK4WC2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 22F9639D16D746850007DF95 /* Build configuration list for PBXProject "ricoh-theta-sample-for-iosv2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 22F9639916D746850007DF95;
+			productRefGroup = 22F963A316D746850007DF95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22F963A116D746850007DF95 /* ricoh-theta-sample-for-iosv2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22F963A016D746850007DF95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA82EBA1BFCABF7000C0F87 /* InfoPlist.strings in Resources */,
+				FABFAFEC1BFCA16C00937B1D /* nothumb.png in Resources */,
+				FABFAFE91BFCA16C00937B1D /* Default.png in Resources */,
+				FABFAFEA1BFCA16C00937B1D /* Default@2x.png in Resources */,
+				FAA82EB71BFCABE5000C0F87 /* MainStoryboard.storyboard in Resources */,
+				FABFAFE81BFCA16C00937B1D /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22F9639E16D746850007DF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABFB0011BFCA36200937B1D /* AppDelegate.m in Sources */,
+				FABFB0031BFCA36200937B1D /* GLRenderView.m in Sources */,
+				FABFAFDA1BFCA10500937B1D /* HttpConnection.m in Sources */,
+				FABFB0041BFCA36200937B1D /* ImageViewController.m in Sources */,
+				FABFAFDB1BFCA10500937B1D /* HttpDeviceInfo.m in Sources */,
+				FABFB0071BFCA36200937B1D /* TableCellObject.m in Sources */,
+				FABFB0061BFCA36200937B1D /* TableCell.m in Sources */,
+				FABFB0091BFCA36200937B1D /* ViewController.m in Sources */,
+				FABFB0021BFCA36200937B1D /* glkViewController.m in Sources */,
+				FABFAFDE1BFCA10500937B1D /* HttpSession.m in Sources */,
+				FABFAFEB1BFCA16C00937B1D /* main.m in Sources */,
+				FABFAFDD1BFCA10500937B1D /* HttpImageInfo.m in Sources */,
+				FABFB0081BFCA36200937B1D /* UVSphere.m in Sources */,
+				FABFAFDF1BFCA10500937B1D /* HttpStatusTimer.m in Sources */,
+				FABFAFE11BFCA10500937B1D /* HttpStream.m in Sources */,
+				FABFAFE01BFCA10500937B1D /* HttpStorageInfo.m in Sources */,
+				FABFAFDC1BFCA10500937B1D /* HttpFileList.m in Sources */,
+				FABFB0051BFCA36200937B1D /* SphereXmp.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAA82EB51BFCABE5000C0F87 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA82EB61BFCABE5000C0F87 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		FAA82EB81BFCABF7000C0F87 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA82EB91BFCABF7000C0F87 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22F963C316D746860007DF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22F963C416D746860007DF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22F963C616D746860007DF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2473VK4WC2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "$(SRCROOT)/ricoh-theta-sample-for-iosv2/ricoh-theta-sample-for-iosv2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theta-2.skd";
+				PRODUCT_NAME = "ricoh-theta-sample-for-iosv2";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		22F963C716D746860007DF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2473VK4WC2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "$(SRCROOT)/ricoh-theta-sample-for-iosv2/ricoh-theta-sample-for-iosv2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theta-2.skd";
+				PRODUCT_NAME = "ricoh-theta-sample-for-iosv2";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22F9639D16D746850007DF95 /* Build configuration list for PBXProject "ricoh-theta-sample-for-iosv2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F963C316D746860007DF95 /* Debug */,
+				22F963C416D746860007DF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22F963C516D746860007DF95 /* Build configuration list for PBXNativeTarget "ricoh-theta-sample-for-iosv2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F963C616D746860007DF95 /* Debug */,
+				22F963C716D746860007DF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22F9639A16D746850007DF95 /* Project object */;
+}

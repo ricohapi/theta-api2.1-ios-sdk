@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>HttpSession Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">RICOH THETA SDK Sample Code </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">RICOH</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/URLSession:downloadTask:didFinishDownloadingToURL:">- URLSession:downloadTask:didFinishDownloadingToURL:</option>
+		
+		<option value="//api/name/URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:">- URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:</option>
+		
+		<option value="//api/name/URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:">- URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:</option>
+		
+		<option value="//api/name/getResizedImageObject:onStart:onWrite:onFinish:">- getResizedImageObject:onStart:onWrite:onFinish:</option>
+		
+		<option value="//api/name/initWithRequest:">- initWithRequest:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">HttpSession Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>HttpSession.h<br />HttpSession.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Class for downloading files via HTTP</p>
+
+<p>File download class</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithRequest:" title="initWithRequest:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithRequest:">&ndash;&nbsp;initWithRequest:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Specified initializer</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithRequest:(NSMutableURLRequest *)<em>request</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>HTTP request</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Instance</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Specified initializer</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HttpSession.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getResizedImageObject:onStart:onWrite:onFinish:" title="getResizedImageObject:onStart:onWrite:onFinish:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getResizedImageObject:onStart:onWrite:onFinish:">&ndash;&nbsp;getResizedImageObject:onStart:onWrite:onFinish:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Download file with specified file ID</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getResizedImageObject:(NSString *)<em>fileUri</em> onStart:(void ( ^ ) ( int64_t expectedTotalBytes ))<em>startBlock</em> onWrite:(void ( ^ ) ( int64_t totalBytesWritten , int64_t totalBytesExpectedToWrite ))<em>writeBlock</em> onFinish:(void ( ^ ) ( NSURL *location ))<em>finishBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fileUri</code></th>
+						<td><p>ID of file to be downloaded</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>startBlock</code></th>
+						<td><p>Block to be called on start of download</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>writeBlock</code></th>
+						<td><p>Blocks to be called successively during download</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>finishBlock</code></th>
+						<td><p>Block to be called at end of download</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Download file with specified file ID</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HttpSession.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:" title="URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:">&ndash;&nbsp;URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delegate to be called on start of download</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)URLSession:(NSURLSession *)<em>session</em> downloadTask:(NSURLSessionDownloadTask *)<em>downloadTask</em> didResumeAtOffset:(int64_t)<em>fileOffset</em> expectedTotalBytes:(int64_t)<em>expectedTotalBytes</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>Session</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>downloadTask</code></th>
+						<td><p>Task</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fileOffset</code></th>
+						<td><p>Acquired byte count on disk</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>expectedTotalBytes</code></th>
+						<td><p>Predicted byte count of entire acquired file</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delegate to be called on start of download</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HttpSession.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:" title="URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:">&ndash;&nbsp;URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delegates to be called successively during download</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)URLSession:(NSURLSession *)<em>session</em> downloadTask:(NSURLSessionDownloadTask *)<em>downloadTask</em> didWriteData:(int64_t)<em>bytesWritten</em> totalBytesWritten:(int64_t)<em>totalBytesWritten</em> totalBytesExpectedToWrite:(int64_t)<em>totalBytesExpectedToWrite</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>Session</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>downloadTask</code></th>
+						<td><p>Task</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bytesWritten</code></th>
+						<td><p>Byte count transferred each time a delegate method is called</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>totalBytesWritten</code></th>
+						<td><p>Current total transferred byte count</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>totalBytesExpectedToWrite</code></th>
+						<td><p>Predicted byte count of acquired file</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delegates to be called successively during download</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HttpSession.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/URLSession:downloadTask:didFinishDownloadingToURL:" title="URLSession:downloadTask:didFinishDownloadingToURL:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/URLSession:downloadTask:didFinishDownloadingToURL:">&ndash;&nbsp;URLSession:downloadTask:didFinishDownloadingToURL:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delegate to be called at end of download</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)URLSession:(NSURLSession *)<em>session</em> downloadTask:(NSURLSessionDownloadTask *)<em>downloadTask</em> didFinishDownloadingToURL:(NSURL *)<em>location</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>Session</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>downloadTask</code></th>
+						<td><p>Task</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>location</code></th>
+						<td><p>File URL of acquired temporary file</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delegate to be called at end of download</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HttpSession.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 RICOH. All rights reserved. Updated: 2015-12-24</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

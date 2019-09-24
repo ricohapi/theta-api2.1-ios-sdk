@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>GLRenderView Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">RICOH THETA SDK Sample Code </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">RICOH</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/draw">- draw</option>
+		
+		<option value="//api/name/gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:">- gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:</option>
+		
+		<option value="//api/name/glCheckError:">- glCheckError:</option>
+		
+		<option value="//api/name/initOpenGLSettings:">- initOpenGLSettings:</option>
+		
+		<option value="//api/name/initWithFrame:">- initWithFrame:</option>
+		
+		<option value="//api/name/loadProgram:fShaderSrc:">- loadProgram:fShaderSrc:</option>
+		
+		<option value="//api/name/loadShader:shaderSrc:">- loadShader:shaderSrc:</option>
+		
+		<option value="//api/name/panGestureHandler:">- panGestureHandler:</option>
+		
+		<option value="//api/name/pinchGestureHandler:">- pinchGestureHandler:</option>
+		
+		<option value="//api/name/registerGestures">- registerGestures</option>
+		
+		<option value="//api/name/rotate:diffy:">- rotate:diffy:</option>
+		
+		<option value="//api/name/scale:">- scale:</option>
+		
+		<option value="//api/name/setTexture:width:height:yaw:pitch:roll:">- setTexture:width:height:yaw:pitch:roll:</option>
+		
+		<option value="//api/name/timerInfo:">- timerInfo:</option>
+		
+		<option value="//api/name/touchesBegan:withEvent:">- touchesBegan:withEvent:</option>
+		
+		<option value="//api/name/touchesEnded:withEvent:">- touchesEnded:withEvent:</option>
+		
+		<option value="//api/name/touchesMoved:withEvent:">- touchesMoved:withEvent:</option>
+		
+		<option value="//api/name/useAndAttachLocation:">- useAndAttachLocation:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">GLRenderView Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>GLKView</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>GLRenderView.h<br />GLRenderView.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>View class for photo spherical display</p>
+
+<p>Images acquired from RICOH THETA S are created by equirectangular projection,
+with the images from camera #2 (left half) + camera #1 +camera#2 (right half) joined at the ends.
+These images can be acquired at a resolution of up to 5376 x 2688.</p>
+
+<p>These images are pasted as texture onto a spherical object on OpenGL using <a href="../Classes/UVSphere.html">UVSphere</a>
+from this class.  As this sphere is drawn at an angle from -pi to pi on the xz plane,
+the UV coordinates are generated in this orientation and attached to the image,
+and are attached so that a mirror image is not generated in the x axis direction
+when viewed from the inside of the sphere.</p>
+
+<p>Furthermore, as the camera image is from angle -pi, the center of the image captured by
+camera #1 faces forward from the x axis. The camera image is slanted at the angle of elevation
+and horizontal angle, the sphere is rotated at each angle, and the image displayed in the x axis
+forward direction is adjusted to the horizontal direction of the image from camera#1.</p>
+
+<p>Pinch and pan operations support zooming in, zooming out and rotating. These are supported by
+changing the camera slant and FOV angle setting value.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithFrame:" title="initWithFrame:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithFrame:">&ndash;&nbsp;initWithFrame:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Startup method</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(CGRect)<em>frame</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>frame</code></th>
+						<td><p>Size on screen</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Startup method</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/draw" title="draw"></a>
+	<h3 class="method-title"><code><a href="#//api/name/draw">&ndash;&nbsp;draw</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Redraw method</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)draw</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Redraw method</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setTexture:width:height:yaw:pitch:roll:" title="setTexture:width:height:yaw:pitch:roll:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setTexture:width:height:yaw:pitch:roll:">&ndash;&nbsp;setTexture:width:height:yaw:pitch:roll:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Texture registration method</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setTexture:(NSMutableData *)<em>data</em> width:(int)<em>width</em> height:(int)<em>height</em> yaw:(float)<em>yaw</em> pitch:(float)<em>pitch</em> roll:(float)<em>roll</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Image for registration</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>width</code></th>
+						<td><p>Image width for registration</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>height</code></th>
+						<td><p>Image height for registration</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>yaw</code></th>
+						<td><p>Camera orientation angle</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pitch</code></th>
+						<td><p>Camera elevation angle</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>roll</code></th>
+						<td><p>Camera horizontal angle</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Texture registration method</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/registerGestures" title="registerGestures"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerGestures">&ndash;&nbsp;registerGestures</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gesture registration method</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)registerGestures</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Gesture registration method</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initOpenGLSettings:" title="initOpenGLSettings:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initOpenGLSettings:">&ndash;&nbsp;initOpenGLSettings:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>OpenGL Initial value setting method</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)initOpenGLSettings:(EAGLContext *)<em>context</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>context</code></th>
+						<td><p>OpenGL Context</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>OpenGL Initial value setting method</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/touchesBegan:withEvent:" title="touchesBegan:withEvent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/touchesBegan:withEvent:">&ndash;&nbsp;touchesBegan:withEvent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Handler when touch start is detected</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)touchesBegan:(NSSet *)<em>touches</em> withEvent:(UIEvent *)<em>event</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>touches</code></th>
+						<td><p>Touch information</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>event</code></th>
+						<td><p>Event</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Handler when touch start is detected</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/touchesMoved:withEvent:" title="touchesMoved:withEvent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/touchesMoved:withEvent:">&ndash;&nbsp;touchesMoved:withEvent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Handler when touch is detected</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)touchesMoved:(NSSet *)<em>touches</em> withEvent:(UIEvent *)<em>event</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>touches</code></th>
+						<td><p>Touch information</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>event</code></th>
+						<td><p>Event</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Handler when touch is detected</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/touchesEnded:withEvent:" title="touchesEnded:withEvent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/touchesEnded:withEvent:">&ndash;&nbsp;touchesEnded:withEvent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Handler when touch exit is detected</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)touchesEnded:(NSSet *)<em>touches</em> withEvent:(UIEvent *)<em>event</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>touches</code></th>
+						<td><p>Touch information</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>event</code></th>
+						<td><p>Event</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Handler when touch exit is detected</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:" title="gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:">&ndash;&nbsp;gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Multiple gesture detection compatibility setting method</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)gestureRecognizer:(UIGestureRecognizer *)<em>gestureRecognizer</em> shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)<em>otherGestureRecognizer</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>gestureRecognizer</code></th>
+						<td><p>Gesture that sent the message to the delegate</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>otherGestureRecognizer</code></th>
+						<td><p>Partner gesture recognized at the same time</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Multiple gesture detection compatibility setting method</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pinchGestureHandler:" title="pinchGestureHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pinchGestureHandler:">&ndash;&nbsp;pinchGestureHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pinch operation compatibility handler</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)pinchGestureHandler:(UIPinchGestureRecognizer *)<em>recognizer</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recognizer</code></th>
+						<td><p>Recognizer object for gesture operations</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Pinch operation compatibility handler</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/panGestureHandler:" title="panGestureHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/panGestureHandler:">&ndash;&nbsp;panGestureHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pan operation compatibility handler</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)panGestureHandler:(UIPanGestureRecognizer *)<em>recognizer</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recognizer</code></th>
+						<td><p>Recognizer object for gesture operations</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Pan operation compatibility handler</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/timerInfo:" title="timerInfo:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/timerInfo:">&ndash;&nbsp;timerInfo:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Timer setting method</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)timerInfo:(NSTimer *)<em>timer</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>timer</code></th>
+						<td><p>Setting target timer</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Timer setting method</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/scale:" title="scale:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/scale:">&ndash;&nbsp;scale:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Zoom in/Zoom out method</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)scale:(float)<em>ratio</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ratio</code></th>
+						<td><p>Zoom in/zoom out ratio</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Zoom in/Zoom out method</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rotate:diffy:" title="rotate:diffy:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rotate:diffy:">&ndash;&nbsp;rotate:diffy:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Rotation method</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)rotate:(int)<em>diffx</em> diffy:(int)<em>diffy</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>diffx</code></th>
+						<td><p>Rotation amount (y axis)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>diffy</code></th>
+						<td><p>Rotation amount (xy plane)</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Rotation method</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadShader:shaderSrc:" title="loadShader:shaderSrc:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadShader:shaderSrc:">&ndash;&nbsp;loadShader:shaderSrc:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Method for creating OpenGL shader</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (GLuint)loadShader:(GLenum)<em>shaderType</em> shaderSrc:(NSString *)<em>shaderSrc</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>shaderType</code></th>
+						<td><p>Shader type</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>shaderSrc</code></th>
+						<td><p>Shader source</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Method for creating OpenGL shader</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadProgram:fShaderSrc:" title="loadProgram:fShaderSrc:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadProgram:fShaderSrc:">&ndash;&nbsp;loadProgram:fShaderSrc:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Program creation function for OpenGL</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (GLuint)loadProgram:(NSString *)<em>vShaderSrc</em> fShaderSrc:(NSString *)<em>fShaderSrc</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>vShaderSrc</code></th>
+						<td><p>Vertex shader source</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fShaderSrc</code></th>
+						<td><p>Fragment shader source</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Program creation function for OpenGL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/useAndAttachLocation:" title="useAndAttachLocation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/useAndAttachLocation:">&ndash;&nbsp;useAndAttachLocation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Program validation and various shader variable validation methods for OpenGL</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)useAndAttachLocation:(GLuint)<em>program</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>program</code></th>
+						<td><p>OpenGL Program variable</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Program validation and various shader variable validation methods for OpenGL</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/glCheckError:" title="glCheckError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/glCheckError:">&ndash;&nbsp;glCheckError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>OpenGL Method for OpenGL error detection</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)glCheckError:(NSString *)<em>msg</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>Output character string at detection</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>OpenGL Method for OpenGL error detection</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">GLRenderView.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 RICOH. All rights reserved. Updated: 2015-12-24</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

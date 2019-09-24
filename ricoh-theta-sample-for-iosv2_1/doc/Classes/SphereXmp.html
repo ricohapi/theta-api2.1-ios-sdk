@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>SphereXmp Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">RICOH THETA SDK Sample Code </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">RICOH</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/indexOf:in:from:">- indexOf:in:from:</option>
+		
+		<option value="//api/name/parse:">- parse:</option>
+		
+		<option value="//api/name/parser:didStartElement:namespaceURI:qualifiedName:attributes:">- parser:didStartElement:namespaceURI:qualifiedName:attributes:</option>
+		
+		<option value="//api/name/parser:foundCharacters:">- parser:foundCharacters:</option>
+		
+		<option value="//api/name/parser:parseErrorOccurred:">- parser:parseErrorOccurred:</option>
+		
+		<option value="//api/name/parserDidEndDocument:">- parserDidEndDocument:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">SphereXmp Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>SphereXmp.h<br />SphereXmp.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>XMP information class included in image data
+The read information is kept in the properties.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/parse:" title="parse:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parse:">&ndash;&nbsp;parse:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Start analysis</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)parse:(NSData *)<em>original</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>original</code></th>
+						<td><p>Image data</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Analysis successful?</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Start analysis</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SphereXmp.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/parser:didStartElement:namespaceURI:qualifiedName:attributes:" title="parser:didStartElement:namespaceURI:qualifiedName:attributes:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parser:didStartElement:namespaceURI:qualifiedName:attributes:">&ndash;&nbsp;parser:didStartElement:namespaceURI:qualifiedName:attributes:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delegates called when XML tags are read during successive processes</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)parser:(NSXMLParser *)<em>parser</em> didStartElement:(NSString *)<em>elementName</em> namespaceURI:(NSString *)<em>namespaceURI</em> qualifiedName:(NSString *)<em>qName</em> attributes:(NSDictionary *)<em>attributeDict</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parser</code></th>
+						<td><p>XML parser</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>elementName</code></th>
+						<td><p>Element name</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>namespaceURI</code></th>
+						<td><p>Name space URI</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>qName</code></th>
+						<td><p>Modified name</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>attributeDict</code></th>
+						<td><p>Attribute dictionary</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delegates called when XML tags are read during successive processes</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SphereXmp.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/parser:foundCharacters:" title="parser:foundCharacters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parser:foundCharacters:">&ndash;&nbsp;parser:foundCharacters:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delegates called when character strings other than XML tags are read during successive processes</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)parser:(NSXMLParser *)<em>parser</em> foundCharacters:(NSString *)<em>string</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parser</code></th>
+						<td><p>XML parser</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>string</code></th>
+						<td><p>Read character string</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delegates called when character strings other than XML tags are read during successive processes</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SphereXmp.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/parserDidEndDocument:" title="parserDidEndDocument:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parserDidEndDocument:">&ndash;&nbsp;parserDidEndDocument:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delegate called when XML analysis is successful</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)parserDidEndDocument:(NSXMLParser *)<em>parser</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parser</code></th>
+						<td><p>XML parser</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delegate called when XML analysis is successful</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SphereXmp.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/parser:parseErrorOccurred:" title="parser:parseErrorOccurred:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parser:parseErrorOccurred:">&ndash;&nbsp;parser:parseErrorOccurred:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Delegate called when XML analysis fails</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)parser:(NSXMLParser *)<em>parser</em> parseErrorOccurred:(NSError *)<em>parseError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parser</code></th>
+						<td><p>XML parser</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parseError</code></th>
+						<td><p>Error information</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Delegate called when XML analysis fails</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SphereXmp.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/indexOf:in:from:" title="indexOf:in:from:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/indexOf:in:from:">&ndash;&nbsp;indexOf:in:from:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Search position of specific data pattern</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)indexOf:(NSData *)<em>sub</em> in:(NSData *)<em>original</em> from:(NSUInteger)<em>startIndex</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sub</code></th>
+						<td><p>Searched data</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>original</code></th>
+						<td><p>Searched data</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>startIndex</code></th>
+						<td><p>Search start position</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The position where the searched data starts. &ldquo;0&rdquo; is returned if there are no hits.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Search position of specific data pattern</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SphereXmp.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 RICOH. All rights reserved. Updated: 2015-12-24</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
