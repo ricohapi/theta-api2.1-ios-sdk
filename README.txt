@@ -1,7 +1,5 @@
 ==================================================
  README for "RICOH THETA v2.1 SDK for iOS"
-
- Version :0.1.0
 ==================================================
 
 This file is an explanation document for RICOH THETA v2.1 SDK for iOS.
@@ -44,11 +42,11 @@ However, this document assumes that you have already registered as an iOS develo
 
 * Required environment for development
 
-    [About RICOH THETA V]
-      Dedicated sample applications for the RICOH THETA V or above that meet the following conditions.
+    [About RICOH THETA]
+      Dedicated sample applications for the RICOH THETA that meet the following conditions.
 
       * Hardware
-          RICOH THETA V or above
+          RICOH THETA V
       * Firmware
           * RICOH THETA V: Version 1.00.1 or above
           (Method for checking and updating the firmware:  https://theta360.com/en/support/manual/s/content/pc/pc_09.html)
@@ -76,23 +74,7 @@ However, this document assumes that you have already registered as an iOS develo
     [More detailed information]
         See the contents of the provided sample program and documents, as well as documents on the Internet for further information.
 
-        https://developers.theta360.com/en/docs/
-
-----------------------------------------
-
-* Latest information
-
-    The latest information is released on the "RICOH THETA Developers" website.
-
-    https://developers.theta360.com/
-
-----------------------------------------
-
-* Troubleshooting
-
-    FAQs are available on the forums.
-
-    https://developers.theta360.com/en/forums/viewforum.php?f=6
+        https://api.ricoh/products/theta-api/
 
 ----------------------------------------
 
@@ -106,9 +88,3 @@ However, this document assumes that you have already registered as an iOS develo
     * Wi-Fi is the trademark of Wi-Fi Alliance.
 
     All other trademarks belong to their respective owners.
-
-----------------------------------------
-
-* Update History
-
-    09/01/2017 0.1.0 Initial release
